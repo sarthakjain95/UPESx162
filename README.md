@@ -8,5 +8,4 @@ B.tech. CSE (AI&ML)
 Well, It had to be something. 162 is the actually the last part of my complete Roll-Number. Where x, like always is variable, represents the other part of my roll number.
 
 x162 as a whole, feels like it represents me. That's why.
-
-###>File names have no affiliation with the courses conducted by the university.   
+>File names have no affiliation with the courses conducted by the university.   
