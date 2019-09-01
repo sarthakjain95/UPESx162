@@ -1,5 +1,5 @@
 # CSE / PYTHON PRACTICALS
-# Practicals for 1st SEM CSE AI&ML [2019-2023] 
+# Practicals for 1st SEM CSE AI&ML [2019-2023]  
 
 # Q1) Say Hello to the user :
 #		Print Hello Everyone !!!
@@ -87,4 +87,4 @@ print("ADDRESS:",address)
 # print("SEMESTER:",sem)
 
 # Sarthak Jain
-# https://github.com/sarthakjain95/UPESx162
+# https://github.com/sarthakjain95/UPESx162 
