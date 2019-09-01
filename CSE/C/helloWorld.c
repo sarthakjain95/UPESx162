@@ -23,7 +23,7 @@ int main(void) {
 
 	printf("\n%0.4f",foo+0.32432);	// 324.7478
 	printf("\n%.f",foo);	// 324
-	// printf('%c-kid, Uno ,Greenday','X');
+	// printf('%c-kid, Tre ,Greenday','X');
 	printf("%d",30>20);	//1 [ 30>20 returns true( which in decimal is 1 ) ] 
 	
 	int watdis = printf("\nabc, \n%c-kid and \n%fth digit kills this.",ch,foo);
