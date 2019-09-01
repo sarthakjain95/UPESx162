@@ -13,7 +13,7 @@
 #define SIZE 56
 
 typedef enum { false, true } bool;
-//                  0      1
+//               0      1
 
 int main(int argc, char * argv[]){
 	char name[SIZE];
