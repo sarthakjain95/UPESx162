@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 import math
 
-# Practical No 3
+# Practical No 2
 # Q1) 
 #	Declare these variables (x, y and z) as integers. Assign a value of 9 to x,
 #	Assign a value of 7 to y, perform addition, multiplication, division and subtraction 
