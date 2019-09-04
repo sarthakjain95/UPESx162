@@ -27,7 +27,7 @@ print(x)
 #		He’s a very naughty boy ! ’
 print("Brian\'s mother: He\'s not the messiah.\nHe\'s a very naughty boy ! ")
 
-# Q6) Write a python programme to print the following string in a specific format (see the output)
+# Q6) Write a python program to print the following string in a specific format (see the output)
 #	Output :
 #		Twinkle, Twinkle, little star,
 #			How I wonder What you are !
