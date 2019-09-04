@@ -13,9 +13,15 @@
 #define SIZE 56
 
 typedef enum { false, true } bool;
-//               0      1
+//                  0      1
 
 int main(int argc, char * argv[]){
+
+	//In the GNU C Library, stdin, stdout, and stderr are normal variables which you can set just like any others. 
+	// For example, to redirect the standard output to a file, you could do:
+	fclose (stdout);
+	stdout = fopen ("standard-output-file.txt", "w");
+
 	char name[SIZE];
 	// fgets reads upto one less than the SIZE argument
 	printf("Input your name:");
@@ -35,7 +41,7 @@ int main(int argc, char * argv[]){
     	while (fgets(c,1000, fp)!=NULL) printf("%s",c);
 	fclose(fp);
 	printf("\n");
-	
+
 	return 0;
 }
 
