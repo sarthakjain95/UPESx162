@@ -28,7 +28,7 @@ print(hours,"Hours",minutes,"Minutes",seconds,"Seconds")
 
 #Q5) Write a program to convert given inches to feet and inches format.
 inches=int(input("Enter Inches:"))
-feets=inches//1213
+feets=inches//12
 print("Inches to Feet:", feets ,"Feet(s) and", inches-(feets*12) )
 
 #Q6) Write a program to calculate volume of cylinder.
