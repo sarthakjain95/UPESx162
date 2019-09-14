@@ -8,4 +8,4 @@ B.tech. CSE (AI&ML)
 Well, It had to be something. 162 is the actually the last part of my complete Roll-Number. 
 x162 as a whole, feels like it represents me (and is a cool name for a repository). That's why.
 
-> File names have no affiliation with the courses conducted by the university.   
+> File names (and sometimes the content) have no affiliation with the courses conducted at the university.   
