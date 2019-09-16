@@ -18,7 +18,7 @@ print("x/y=",x/y)
 #	Compute the area of a square having side(S) equal to 145 units. Assign the result 
 #	to a variable named area and print it.
 side=145
-area=145**2
+area=side**2
 print("Area of Square is ",area,"units")
 
 # Q3) 
