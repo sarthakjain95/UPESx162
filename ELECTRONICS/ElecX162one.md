@@ -63,7 +63,7 @@ Depending on the type of impurity, these are classified as:
 If we bring a p-type and an n-type semiconductor crystal close to one another. There would still be micro gaps between them. So a pn-junction is fabricated using special technique. In this technique, a germanium crystal and an indium crystal are heated upto 500C and they both melt and combine together. They are then solidified under proper conditions and they form one single crystal.  
   
 **PROPERTIES OF A PN JUNCTION**  
-[PN junction basics](https://www.youtube.com/watch?v=JRf2VuwBVvs)  
+[PN JUNCTION BASICS](https://www.youtube.com/watch?v=JRf2VuwBVvs)  
 Once the final pn junction is formed the [Depletion Layer](http://www.physics-and-radio-electronics.com/electronic-devices-and-circuits/semiconductor-diodes/depletion-region.html) is formed. The depletion layer acts as a barrier in the movement of electrons and holes. There is now a potential across the depletion layer called the barrier potential.  
 For silicon, Vo = 0.7 V  
 For germanium, Vo = 0.3 V  
@@ -97,4 +97,55 @@ The max forward current that a diode can handle.
 **PEAK INVERSE VOLTAGE**  
 Max reverse voltage that the diode can handle without buring out.  
   
+## SOLVED QUESTIONS  
+    
+Q. What do you understand by a semi-conductor ? Discuss some important properties of semiconductors.  
+  
+>  Semi-conductors are substances that have a conductivity that falls between that of general-conductors and insulators. Some Important Properties of a semiconductor are:  
+>  1. Negative Temperature Coefficient : Resistance decreases with temperature.  
+>  2. Doping can easily change resistance by a large value.  
+>  3. These have a moderate conductivity/resistance.  
+  
+Q. Which are the most commonly used semiconductors and why ?  
+  
+>  Silicon is the most commonly used semiconductor that is used in electronics and internals of computer chips. Silicon is used because of it's low cost and abundance.
+  
+Q. Give the energy band description of semiconductors.  
+  
+>  Other than relating directly with the charge carriers, there is one more way we can differentiate between Conductors, Semiconductors and Insulators. That is the Energy band theory. This theory basically states that the energies of electrons in a solid can be visualised as the gap in valence band and conduction band of the solid. And materials can be classified on the basis of difference in energy in these bands. So, thus, Conductors have very low (or non-existent) gap in between conduction and valence band. While Insulators have a considerable (huge!) gap in conduction and valence band. And lastly, the semiconductors have a small gap in valence and conduction band. A gap so small that electrons can cross that barrier at room temperature. Based on this, A new defenition for semiconductors would be : A semiconductor is a substance which has almost filled valence band and nearly empty conduction band with a very small energy gap separating the two.
+  
+Q. Discuss the effect of temperature on semiconductors.  
+  
+>  The conductivity of semi-conductors changes appreciably with a change in temperature.  
+>  1. At Absolute Zero :   
+>  At aboslute zero, there is basically no energy in the crystal/solid. So electrons don't have energy to move around. So they are tightly held by the semi-conductor atoms. And the semi-conductor behaves as the perfect insulator.  
+>  2. Above Absolute Zero :   
+>  Above absolute zero, there is energy in the solid crystals of a semiconductors. Which means that some of the electrons would eventually break apart from the bond-pair they are part of, And generate charge carriers in the crystal lattice.  
+  
+Q. Give the mechanism of hole current flow in a semiconductor.  
+  
+> At room temperature, some of the bonds in the semiconductors break and produce free electrons. When these electron leave their respective place, they produce 'Holes' at that position. When a current is applied to the semi-conductor, A electric field is set up in the semiconductor. Under the influence of this electric field, A electric current is set up in the materical. At the same time, A hole current is also flowing in the semi-conductor. Holes (or basically a positive charge) are very good at attracting electrons. When a electron from a nearby bond comes to fill the hole, another hole is created at the position of that electron. Another nearby electron might move to fill in this new hole. This process constitutes that hole current.   
+  
+Q. What do you understand by intrinsic and extrinsic semiconductors ?  
+  
+> 
+  
+Q. What is a pn junction ? Explain the formation of potential barrier in a pn junction.  
+  
+> 
 
+Q. Discuss the behaviour of a pn junction under forward and reverse biasing.  
+  
+>  
+  
+Q. Draw and explain the V-I characteristics of a pn junction.  
+
+> 
+
+Q. Write short notes on the following :  
+	(i) Breakdown voltage  
+	(ii) Knee voltage  
+	(iii) Limitations in the operating conditions of pn junction  
+  
+> 
+  
