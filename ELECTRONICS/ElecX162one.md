@@ -128,24 +128,15 @@ Q. Give the mechanism of hole current flow in a semiconductor.
   
 Q. What do you understand by intrinsic and extrinsic semiconductors ?  
   
-> 
+> Intrinsic semiconductors are substances that are highly pure but still behave like semiconductors. While Extrinsic semiconductors are substances that behave as semiconductors only when they are doped.  
   
 Q. What is a pn junction ? Explain the formation of potential barrier in a pn junction.  
   
-> 
-
+> A pn junction is the boundary of interface between n-type and p-type. The p-type side contains a lot of holes (or positive charges), while the n-type side contains an excess of electrons. At the interface (the pn junction), when the two charge carriers meet, they consume each other in the process. As they diffuse on the junction, they also create a positive and a negative ion on the junction, which makes the further recombination of holes and electrons harder. Thus making a barrier potential acoss the semiconductor. Only when we apply a potential greater than the barrier potential, the diode will conduct.  
+  
 Q. Discuss the behaviour of a pn junction under forward and reverse biasing.  
   
->  
+> In Forward biased conditions, The positive terminal is connected with the p-side of the semiconductor while the n-side is connected to the negative terminal. Under this setup, the diode will conduct the current, offering very little resistance upto the barrier potential. After that, it establishes a low resistance pathway.  
+> In reverse biased condition, The negative terminal is connected with the n-side of the semiconductor while the p-side is connected to the positive terminal. Under this setup, the diode will not conduct current upto the breakdown voltage. Because the barrier potential actually increases as we increase the current through the diode in reverse conditions. But after the breakdown voltage of the diode, There is a sudden increase in current flow. This is called Reverse saturation current.   
   
-Q. Draw and explain the V-I characteristics of a pn junction.  
-
-> 
-
-Q. Write short notes on the following :  
-	(i) Breakdown voltage  
-	(ii) Knee voltage  
-	(iii) Limitations in the operating conditions of pn junction  
-  
-> 
   
