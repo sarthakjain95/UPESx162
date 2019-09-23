@@ -72,7 +72,49 @@ else:
 #e.g.
 #I/P: day=20 month=9 year=2005
 #O/P: day=21 month=9 year 2005
+def isLeap(year):
+	if year%400==0:
+		return True
+	elif year%100==0:
+		return False
+	elif year%4==0:
+		return True
+	else:
+		return False
 
+day= int(input("Enter day:"))
+month= int(input("Enter month:"))
+year= int(input("Enter year:"))
+if month==2:
+	if isLeap(year):
+		if day==29:
+			day= 1
+			month+=1
+		else:
+			day+=1
+	else:
+		if day==28:
+			day= 1
+			month+=1
+		else:
+			day+=1
+elif month%2==0:
+	if day==30:
+		day= 1
+		if month+1 > 12:
+			year+=1
+			month= 1
+		else:
+			month+=1
+	else:
+		day+=1
+else:
+	if day==31:
+		day= 1
+		month+=1
+	else:
+		day+=1
+print("day=",day," month=",month," year=",year)
 
 #10. Print the grade sheet of a student for the given range of cgpa. Scan marks of five subjects and calculate the percentage.
 #CGPA=percentage/10
@@ -88,7 +130,7 @@ else:
 #Sample Gradesheet
 #Name: Rohit Sharma
 #Roll Number: R17234512 SAPID: 50005673
-#Sem: /1 Course: B.Tech. CSE AI&ML
+#Sem: 1 Course: B.Tech. CSE AI&ML
  
 #Subject name: Marks
 #PDS: 70
@@ -100,4 +142,43 @@ else:
 #CGPA:7.0
 #Grade: A
 
+name= input("Enter Student name:")
+roll= input("Enter Student Roll no.:")
+sap= input("Enter Student SAP ID:")
+sem= input("Enter Student Semester:")
+course= input("Enter Student course:")
+
+pds= int(input("Enter PDS marks:"))
+py= int(input("Enter Python marks:"))
+chem= int(input("Enter Chemistry marks:"))
+eng= int(input("Enter English marks:"))
+phy= int(input("Enter Physics marks:"))
+
+total= pds+py+chem+eng+phy
+percentage= total/5
+cgpa= percentage/10
+grade='A'
+
+if 0 <= cgpa <= 3.4: grade= 'F'
+elif 3.5 <= cgpa <= 5: grade= 'C+'
+elif 5.1 <= cgpa <= 6: grade= 'B'
+elif 6.1 <= cgpa <= 7: grade= 'B+'
+elif 7.1 <= cgpa <= 8: grade= 'A'
+elif 8.1 <= cgpa <= 9: grade= 'A+'
+elif 9.1 <= cgpa <= 10: grade= 'O'
+
+print("Name:",name)
+print("Roll Number:",roll, " SAPID:",sap)
+print("SEM:", sem, " COURSE:", course)
+
+print("Subject Name : Marks")
+print("PDS:",pds)
+print("Python:",py)
+print("Chemistry:",chem)
+print("English:",eng)
+print("Physics:",phy)
+
+print("Percentage:",percentage)
+print("CGPA:",cgpa)
+print("Grade:",grade)
 
