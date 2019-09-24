@@ -182,3 +182,25 @@ print("Percentage:",percentage)
 print("CGPA:",cgpa)
 print("Grade:",grade)
 
+#Extra Questions
+
+# Accept a number from user and determine if the nuber is divisibly by 7 and is a multiple of 5
+num= int(input("Enter a number: "))
+if num%7==0 and num%5==0:
+	print("Number is divisible by 7 and is a multiple of 5")
+
+
+# Accept a number from user and check if the number lies between 1 ans 20
+num= int(input("Enter a number: "))
+if 1<num<20:
+	print("Number lies between 1 and 20")
+
+
+# Accept temperature from user and convert that from
+# 1. celcius to farhenheit
+# 2. farhenheit to celcius
+cel= int(input("Enter temperature in celcius: "))
+print("Temperature in farhenheit:",  (cel*9/5)+32 )
+
+far= int(input("Enter temperature in farhenheit: "))
+print("Temperature in celcius:", (far-32)*(5/9) )
