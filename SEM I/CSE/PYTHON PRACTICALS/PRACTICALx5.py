@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 
 # Q1) Write a program to count and display the number of capital letters in a given string.
 string= input("Enter a string:")
@@ -9,7 +8,7 @@ for i in list(string):
 print("Number of capital letters counted:",counter)
 
 # Q2) Count total number of vowels in a given string.
-vowels= ['a','e','i','o','u']
+vowels= ['a','e','i','o','u','A','E','I','O','U']
 string= input("Enter a string:")
 counter= 0
 for i in list(string):
@@ -25,8 +24,7 @@ print(string)
 
 # Q4) Program to count number of unique words in a given sentence.
 unique_words= []
-string= input("Enter a string to count unique numbers:")
-string= string.split(' ')
+string= input("Enter a string to count unique words:").split(' ')
 for word in string:
 	if word not in unique_words:
 		unique_words.append(word)
@@ -36,8 +34,8 @@ print("Number of unique words in the given string:",len(unique_words))
 nums= []
 n= int(input("Enter number of values to input:"))
 for i in range(n):
-	temp= int(input("Enter {0} value: ".format(i+1) ))
-	nums.append(temp)
+	temp= int(input("Enter value {0}: ".format(i+1) ))
+	print("Square of {number} is {square}.".format(number=temp, square=temp*temp) )
 
 # Q6) Take two sets and apply set operators on them :
 # S1 = {Red ,yellow, orange , blue }
