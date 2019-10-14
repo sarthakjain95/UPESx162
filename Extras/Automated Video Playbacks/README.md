@@ -22,4 +22,6 @@ It does work, on my system.
   
 > If there's an Issue, mail me at thelazycrazywizard@gmail.com (Yes. that's real)  
     
-P.S. : I'll be adding the usage and other details in a few days  
+P.S. : I'll be adding the usage and other details in a few days. This program is
+still under development. And I'm continuously testing and fixing bugs for this
+program.  
