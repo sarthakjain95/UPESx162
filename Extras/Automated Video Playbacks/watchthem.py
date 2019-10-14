@@ -202,7 +202,10 @@ for f2f in videos_links:
 	vids= []
 
 	session_name= soup.find("span", {"id":"pageTitleText"}).find("span").text
-	updateText( "Now on " + session_name[0:session_name.index(":")] )
+	if ':' in session_name :
+		updateText( "Now on " + session_name[0:session_name.index(":")] )
+	else:
+		updateText( "Now on " + session_name[0:10] )
 
 	time.sleep(0.5)
 	# Iterate on content to see if the video is to be played
@@ -225,58 +228,86 @@ for f2f in videos_links:
 
 	for video in vids:
 
-		video_i= vids.index(video)
+		video_i= vids.index(video)+1
+		if video_i==0 or session_index in [1,2]:
+			updateText("Skipping video!")
+			continue
 		updateText("Playing video ...")
 		
 		if video[0] == "embed":
+			# browser.switch_to.default_content()
 			updateText("Clicked on the video")
 			browser.find_element_by_xpath("//*[@title=\""+video[1]['title']+"\"]").click()
+			# browser.execute_script("document.getElementById(\""+video[1]['id']+"\").scrollIntoView(true);")
 			updateText("Waiting to load ...")
-			time.sleep(2)
+			# time.sleep(10)
 			# vid= browser.find_elements_by_class_name("lb-wrapper")
 			vid_soup= BeautifulSoup(browser.page_source, features="html.parser")
-			vid_soup= vid_soup.find("div", {"class":"previewDiv ytIframeClass"})
+			vid_soup= vid_soup.find("div", {"class":"lb-content"})
 			# print(vid_soup)
-			browser.find_element_by_id( vid_soup['id'] ).click()
-			time.sleep(2)
+			# browser.find_element_by_id( vid_soup['id'] ).click()
+			# print("Wait complete")
+			# time.sleep(5)
+			# print(vid_soup.find("iframe")['id'])
+			# time.sleep(10)
+			browser.execute_script( "document.getElementsByClassName(\"lb-header\")[0].scrollIntoView(true);" )
 			browser.switch_to.frame( vid_soup.find("iframe")['id'] )
-			updateText("Clicked on the play button")
 			time.sleep(1)
+			# print("stop2")
 			iframe_soup= BeautifulSoup(browser.page_source, features="html.parser")
-			duration= iframe_soup.find("span", {"class":"ytp-time-duration"}).text
-			total_time= int(duration.split(":")[0])*60 + int(duration.split(":")[1])
-			duration= 0
+			
+			while not iframe_soup.find("span", {"class":"ytp-time-duration"}).text :
+				updateText("Waiting for content to load ...")
+				time.sleep(1)
 
+			while not browser.find_element_by_class_name("ytp-cued-thumbnail-overlay") :
+				updateText("Waiting for content to load ...")
+				time.sleep(1)
+			# print("step")
+			browser.find_element_by_class_name("ytp-cued-thumbnail-overlay").click()
+			updateText("Clicked on the play button")
+			duration= iframe_soup.find("span", {"class":"ytp-time-duration"}).text
+			
+			total_time= int(duration.split(":")[0])*60 + int(duration.split(":")[1]) - 10
+			# total_time= 10
+			duration= 0
+			
+			# time.sleep(3)
 			while duration < total_time:
 				duration+=1
 				time.sleep(1)
 				updateProgressBar(session_index, video_i, len(vids), duration, total_time)
 
 			browser.switch_to.default_content()
-			browser.find_elements_by_class_name("lbAction u_floatThis-right").click()
-
+			browser.find_element_by_xpath('//*[@class=\"lbAction u_floatThis-right\"]').click()
 		else:
 			
 			browser.find_element_by_id(video[1]['id']).click()
-
+			browser.execute_script("document.getElementById(\""+video[1]['id']+"\").scrollIntoView(true);")
 			# changing browser content
 			browser.switch_to.frame( browser.find_element_by_id( video[1]['id'] ) )
 			iframe_soup= BeautifulSoup(browser.page_source, features="html.parser")
 			
+			while not iframe_soup.find("span", {"class":"ytp-time-duration"}).text :
+				updateText("Waiting for content to load ...")
+				time.sleep(1)
+
 			duration= iframe_soup.find("span", {"class":"ytp-time-duration"}).text
 			updateText("Total Duration :"+duration)
 			# time.sleep(120)
-			total_time= int(duration.split(":")[0])*60 + int(duration.split(":")[1])
+			total_time= int(duration.split(":")[0])*60 + int(duration.split(":")[1]) - 10
+			# total_time= 10
 			duration= 0
-			# def updateProgressBar(s_i=1, v_i=0, t_v=0, st=0, l=0)
+
 			while duration < total_time:
 				duration+=1
 				time.sleep(1)
 				updateProgressBar(session_index, video_i, len(vids), duration, total_time)
+			# time.sleep(3)
 
 			browser.switch_to.default_content()
-			print()
-		
+			browser.find_element_by_id(video[1]['id']).click()
+		print()		
 
 
 # print("Closing the browser session.")
