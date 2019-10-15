@@ -229,9 +229,9 @@ for f2f in videos_links:
 	for video in vids:
 
 		video_i= vids.index(video)+1
-		if video_i==0 or session_index in [1,2]:
-			updateText("Skipping video!")
-			continue
+		# if video_i==0 or session_index in [1,2]:
+			# updateText("Skipping video!")
+			# continue
 		updateText("Playing video ...")
 		
 		if video[0] == "embed":
