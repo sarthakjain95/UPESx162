@@ -56,8 +56,8 @@ print("Values after function changeList2",group,"\n")
 
 # A.
 # In the sets of code given above,
-# 'changeList' would receive a list item as an argument in the function and try to append another list as an
-# element is the given array. In this case, the changes would be reflected in the actual array passes to
+# 'changeList' would receive a list as an argument in the function and try to append another list as an
+# element is the given array. In this case, the changes would be reflected in the actual array passed to
 # the function. 
 # However, in 'changeList2', the variable 'l', that receives the passed array is assigned
 # with a new value (another array), In this case, the changes would not be reflected in the array
@@ -65,7 +65,7 @@ print("Values after function changeList2",group,"\n")
 # Assigning the name to a new explicit array would give rise to a new object in the memory.
 # 
 # When an immutable data type is passed in a function like this, the changes would not be reflected in
-# the actual variable that was passed. Due to the immutable state of the object, when it is passed 
+# the actual variable that was passed. Due to the immutable state of the object, when it is passed as
 # an argument to functions, another local copy of the variable is created and the changes are made 
 # on this new memory location instead of the actual variable that was passed.
 
