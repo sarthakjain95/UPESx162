@@ -1,4 +1,6 @@
 
+# Practical 5
+
 # Q1) Write a program to count and display the number of capital letters in a given string.
 string= input("Enter a string:")
 counter= 0
@@ -8,7 +10,7 @@ for i in list(string):
 print("Number of capital letters counted:",counter)
 
 # Q2) Count total number of vowels in a given string.
-vowels= ['a','e','i','o','u','A','E','I','O','U']
+vowels= "aeiouAEIOU"
 string= input("Enter a string:")
 counter= 0
 for i in list(string):

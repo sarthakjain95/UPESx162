@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 
+# Practical 6
 
 # Q1) 
 # Scan n values in range 0-3 and print the number of times 
