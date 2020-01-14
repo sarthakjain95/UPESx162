@@ -1,57 +1,59 @@
 
 // UPESx162 - Github
-// storageClassSpecifiers.cpp
+// accessModifiers.cpp
 
 #include<iostream>
 #include<cstdio>
+#include<ctime>
 
-// using namespace std; 
+#include"containsPI.cpp"
 
-typedef __int128_t d128;
-typedef std::string string;
+// extern float pi;
 
-class hash{
-
-	// Private by default
-	string color2hash(string color){ return "GLL`C!S`"; }
-
-	int _hX_dlim_(d128 face, int x=0xf, char c='F'){
-		return printf("%c", (((face&0x1FULL<<x*5)>>x*5)+0x40) );
-	}
-
-	protected:
-
-		d128 color;
-		void hash2color(d128 hs, int i=0){ for(;i<8;i++) _hX_dlim_(hs, i); }
-
-	public:
-
-		// Seriously though, who needs this?
-		string description;
-		hash(){ color=0xfbde6fc822; }
-
-};
-
-class hashInterface : private hash {
-
-	d128 face;
-	int dx;
-
-	public:
-
-		void setColor(d128 c){ color= c; }
-
-		string getHash(){ hash2color(face); return " "; }
-		hashInterface(d128 f, int ex){ face= f; }
-
-};
+void retain(){
+	// Local static member
+	static int x= 0;
+	x+=2;
+	printf("\nx is %d", x);
+}
 
 int main(){
+	
+	auto i= 0;
+	for(i=0; i<4 ; i++) retain();
+	
+	clock_t start, stop;
+	double elapsed;
+	long x=0;
 
-	hashInterface x_17(0xfc822FBDE6,8);
-	std::cout<<x_17.getHash()<<std::endl;
+	size_t n= 0;
+	register size_t nr= 0;
+
+	printf("\n\nTesting to see if register variable is faster than normal variable.\n");
+	printf("\n\nCounting to 2^32 using normal variable.\n");
+	
+	start = clock();
+        for(n=0; n<4294967296; n++){
+        	if(n%2 == 0) x+=n;
+        	else x-=n;
+        }
+	stop = clock();
+	elapsed = (double)(stop - start) / CLOCKS_PER_SEC;
+	printf("Normal variable took %lf seconds!\n", elapsed);
+	
+	printf("\n\nCounting to 2^32 using register variable.\n");
+	start = clock();
+        for(nr=0; nr<4294967296; nr++){
+        	if(nr%2 == 0) x+=nr;
+        	else x-=nr;
+        }
+	stop = clock();
+	elapsed = (double)(stop - start) / CLOCKS_PER_SEC;
+	printf("Register variable took %lf seconds!\n", elapsed);
+
+	printf("\nGot Pi from external file: %lf\n\n", pi );
+
 	return 0;
-
 }
 
 // sarthakjain95
