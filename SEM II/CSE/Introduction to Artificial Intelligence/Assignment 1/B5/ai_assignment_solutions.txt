@@ -1,0 +1,33 @@
+Ans. 1:
+The best way to showcase intelligence of the solution would be to look at the 
+results the machine is producing with the given data. While Conventional computing 
+only compares the new query within the pre-defined database, An Intelligent machine 
+might process and give out the most effective solution. We can use this ability to 
+compute large instructions more efficiently, Because the computer is now able to 
+make more intelligent decisions(like a Human).
+  
+References: 
+https://cs.stanford.edu/people/eroberts/courses/soco/projects/neural-networks/Comparison/comparison.html
+https://www.steadyrun.com/difference-between-intelligent-computing-vs-conventional-computing
+  
+  
+Ans. 2:
+The code for this question is attached with this submission.
+In case it isn't working:
+Github Link: https://github.com/sarthakjain95/AI-Assignment/blob/master/solution.py
+PasteBin (BackUp) Link: https://pastebin.com/KHfZAfFT
+  
+  
+Ans. 3:
+To simplify the problem solving, the representation of knowledge is very important in
+a information system. Good, Consistent representation of facts, will give out better 
+results for the problems.  
+
+When the computer is dealing with Language Processing or NLP, the system has to work
+hard comparing large volumes of data to derive conclusions effectively. And good
+representation of knowledge(information) can make this task easier.
+
+References: 
+https://groups.csail.mit.edu/medg/ftp/psz/k-rep.html
+https://www.cs.toronto.edu/~hector/PublicKRSlides.pdf
+https://psychology.wikia.org/wiki/Knowledge_representation
