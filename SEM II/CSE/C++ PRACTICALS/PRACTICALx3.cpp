@@ -14,7 +14,6 @@ using namespace std;
 class Node{
 
 	public:
-
 		int data;
 		Node * prev;
 
@@ -69,7 +68,7 @@ class Stack{
 		void print(){
 
 			if(this->top==NULL){
-                                printf("\nNo element in the stack!");
+                                printf("\nNo element in the stack!\n");
                                 return;
 			}
 
@@ -80,6 +79,7 @@ class Stack{
 				printf("\n%d", temp->data);
 			}
 
+			cout<<endl;
 		}
 
 		~Stack(){}
@@ -111,15 +111,12 @@ int main(){
 				  break;
 			
 			case '3': s1.print();
-				  cout<<endl;
 				  break;
 			
-			case '4': printf("\nTop value is %d", s1.peek());
-				  cout<<endl;
+			case '4': printf("\nTop value is %d\n", s1.peek());
 				  break;
 			
 			case '5': return 0; 
-				  break;
 			
 			default:  printf("\n%c is invalid input\n", ans);
 		
