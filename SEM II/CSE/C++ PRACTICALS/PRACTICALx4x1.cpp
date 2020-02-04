@@ -1,9 +1,17 @@
 
 // Practical 4
 // Title: Friends to a Class and Inheritance
-// Objective: To understand the concepts of Inheritance and Diamond Problem
+// Objective: To understand the concepts of friend function, friend class and Inheritance
 
-// Final Result Calculation
+// Implement Inheritance as shown in the diagram.
+// Class Student has members functions
+// student_Details() and display_Student_Details() and
+// name, roll no, and gender as data members.
+// Internal_Exam and External_Exam classes have
+// separate functions to get and display Internal and
+// External marks for 6 subjects. Define Result class to
+// evaluate and display the results suitably (40%
+// Internal + 60% External).
 
 #include<iostream>
 #include<cstdio>

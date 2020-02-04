@@ -3,7 +3,8 @@
 // Title: Dynamic Memory Allocation
 // Objective: To understand the concept of Dynamic Memory Allocation
 
-// Linked List Based Stack (Class Implementation)
+// Implement the operations of a dynamically allocated Stack data structure using a self-referential
+// structure and single Linked List.
 
 #include<iostream>
 #include<cstdio>
