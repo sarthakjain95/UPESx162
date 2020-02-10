@@ -33,7 +33,7 @@ int main(){
 	// xyz.classVarChar= 'a';
 
 	// (Member Function Pointer) Syntax
-	// return_type (class_name::*ptr_name)=  
+	// return_type (class_name::*ptr_name)=  &(class_name)::(class_function_name);
 	string (typicalClassName::*_gx_)(void)= &typicalClassName::gHash;
 	cout<<(xyz.*_gx_)()<<endl;
 
