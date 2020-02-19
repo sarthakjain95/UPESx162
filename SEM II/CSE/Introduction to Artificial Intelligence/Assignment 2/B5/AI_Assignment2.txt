@@ -1,0 +1,32 @@
+Ans 1.
+
+Today's AI systems approach the problems in two different ways:
+
+1. Cognitive Intelligence 
+In this approach, the computation focuses largely on understanding and reasoning at a high level. These systems observe and learn and try to simulate the human thought process. The systems that use this approach usually supplement decision making by humans. This approach focuses on the Analytical aspects of Intelligence. 
+ 
+2. Evolutionary Intelligence
+In recent years, scientists are trying to make machine learning models better by taking inspiration from the biological evolution by copying some general processes involved in it. Using this approach, scientists are able to make models that are able to better adapt/improve in a changing environment. This new approach enables us to select the best possible solution from the whole generation of solutions. We can test and make these generations and solutions on a computer in a very short amount of time. This approach focuses mainly on the Creative and Practical Aspects of Intelligence.
+ 
+:References:
+https://analyticsindiamag.com/different-cognitive-computing-artificial-intelligence/
+https://www.i-scoop.eu/artificial-intelligence-cognitive-computing/
+https://www.rtinsights.com/whats-the-difference-between-cognitive-computing-and-ai/
+ 
+
+Ans 2.
+
+: Algorithm for TicTacToe :
+
+Step 1:>>  Start
+Step 2:>>  Make a 3x3 grid
+Step 3:>>  Take User input for a valid position in the grid
+Step 4:>>  Update grid
+Step 5:>>  Check for 3 consecutive criteria. If found, goto Step 12
+Step 6:>>  Check to see if the User is winning by choosing any remaining location. If yes, Choose that location.
+Step 7:>>  Check to see if choosing any location results in a win for the computer. If yes, Choose that location.
+Step 8:>>  If Step 6 and Step 7 are false, Choose a random location.
+Step 9:>>  Update Grid
+Step 10:>> If 3 consecutive criteria are found or the grid is full, goto Step 12
+Step 11:>> Goto Step 3
+Step 12:>> Stop
