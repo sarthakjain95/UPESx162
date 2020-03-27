@@ -15,31 +15,48 @@ struct HashTable{
 		for(size_t i{}; i<size; i++) table[i]= 0;
 	}
 
-	uint8_t insert(size_t val){
+	int64_t insert(size_t val){
 		size_t pos= hashCalculator(val);
-		if( pos<0 || pos>=size ){
+		if( pos>=size ){
 			return -1;
 		}else{
-			while(table[pos]!=0 && pos<=size) pos= (pos+1)%size;
-			if(pos>=size) return -1;
-			table[pos]= val;
+			if( table[pos] ){
+				size_t i{ (pos+1)%size };
+				while(table[i]!=0 && i!=pos) i= (i+1)%size;
+				if(i==pos) return -1;
+				table[i]= val;
+				return i;
+			}else{
+				table[pos]= val;
+				return pos;
+			}
 		}
 	}
 
 	size_t check(uint64_t val){
 		size_t pos= hashCalculator(val);
-		if( pos<0 || pos>=size ){
+		if( pos>=size ){
 			return false;
 		}else{
-			while(table[pos]!=val && pos<=size) pos= (pos+1)%size;
-			if(pos>=size) return false;
-			else return pos;
+			if( table[pos]!=val ){
+				size_t i{ (pos+1)%size };
+				while(table[i]!=val && i!=pos) i= (i+1)%size;
+				if(i==pos) return false;
+				else return i;
+			}else{
+				return pos;
+			}
 		}		
 	}
 
 	void del(uint64_t val){
 		size_t pos= check(val);
-		if( pos ) table[pos]= 0;	
+		if( table[pos]==val ){ 
+			table[pos]= 0;
+			printf("%llu Deleted.\n", val);
+		}else{
+			printf("%llu not found!\n", val);
+		}	
 	}
 
 	void print(){
@@ -75,7 +92,7 @@ int main(){
 			case 1:{
 					printf("\nEnter new (Positive) Value:");
 					scanf("%llu", &temp);
-					if( db.insert(temp) == -1 ) printf("Error Occured!\nCould not add Value!\n");
+					if( db.insert(temp) == -1 ) printf("Error Occured!\nCould not insert new Value!\n");
 					else printf("Added Value!\n"); 
 			} break;
 
