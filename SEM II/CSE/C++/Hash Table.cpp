@@ -2,6 +2,7 @@
 #include<functional>
 using namespace std;
 
+// Follows Open Addressing
 template<class Fn>
 struct HashTable{
 
