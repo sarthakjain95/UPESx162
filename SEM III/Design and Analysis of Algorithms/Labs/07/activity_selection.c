@@ -53,7 +53,7 @@ void select_activities(int * start_times, int * finish_times, int n){
 int main(){
 
 	int start_times[n_activities]  = {3, 1, 0, 5, 8, 9};
-	int finish_times[n_activities] = {5, 2, 8, 8, 9, 12};
+	int finish_times[n_activities] = {5, 2, 1, 8, 9, 12};
 
 	printf("Activity Selection: ");
 	select_activities(start_times, finish_times, n_activities);
