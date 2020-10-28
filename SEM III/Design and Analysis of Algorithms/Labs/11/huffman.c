@@ -156,7 +156,7 @@ int main(int argc, char* argv[]){
 		}
 	}
 
-	//	logs
+	// logs
 	// printf("%d %d", unique_characters_count, char_frequency_map_size);
 	// for(int i=0; i<char_frequency_map_size; i++) 
 		// printf("'%c' %3d\n", char_frequency_map[i].ch, char_frequency_map[i].freq);
@@ -170,7 +170,7 @@ int main(int argc, char* argv[]){
 	for(int i=0; i<ASCII_RANGE; i++) code_map[i] = NULL;
 	generate_huffman_codes(huffman_tree_root, code_map, code, code_size);
 
-	//	logs
+	// logs
 	// int counted_nodes = 0;
 	// for(int i=0; i<ASCII_RANGE; i++){
 	// 	if( code_map[ i ] != NULL ){
@@ -200,9 +200,9 @@ int main(int argc, char* argv[]){
 		} char_code;
 
 		int map_size = sizeof(char_code) * unique_characters_count;
-		// suppose the first sizeof(void**) bytes in out 'new_data' indicate the stating
+		// suppose the first 'sizeof(void*)' bytes in out 'new_data' indicate the starting
 		// point of the map
-		int single_address_size = sizeof(void**);
+		int single_address_size = sizeof(void*);
 
 		int new_size_final = new_size + map_size + single_address_size;
 		printf("New Length (with all mapping info): ~%d bytes\n", new_size_final);
