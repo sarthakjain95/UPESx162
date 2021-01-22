@@ -21,7 +21,6 @@ x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.20, random
 
 model = tf.keras.models.Sequential()
 
-model.add(Dense(4, activation="relu"))
 model.add(Dense(12, activation='relu'))
 model.add(Dense(6, activation='relu'))
 model.add(Dense(2, activation='relu'))
