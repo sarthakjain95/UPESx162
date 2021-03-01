@@ -4,8 +4,8 @@
 #include<stdbool.h>
 #include<string.h>
 
-#define CHR2BIN(chr) ((chr=='1') ? 1 : 0)
-#define BIN2CHR(bin) ((bin==1) ? '1' : '0')
+#define CHR2BIN(chr) ( ((chr)=='1') ? 1 : 0 )
+#define BIN2CHR(bin) ( ((bin)==1) ? '1' : '0' )
 
 int main(){
 
@@ -32,7 +32,7 @@ int main(){
 		if(j == polynomial_length){
 			// XOR temp with polynomial
 			for(k=0; k<polynomial_length; k++){
-				temp[k] = BIN2CHR( CHR2BIN(temp[k]) ^ CHR2BIN(polynomial[k]) );
+				temp[k] = BIN2CHR( (CHR2BIN(temp[k]) ^ CHR2BIN(polynomial[k])) );
 			}
 			// change j to the number of new bits that can be added
 			for(j=0; j<polynomial_length; j++)
