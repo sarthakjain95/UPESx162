@@ -2,7 +2,7 @@
 
 ## How to install
 
-1. Setup WSL with Ubuntu (20.04 LTS Recommended) [See [this](https://www.windowscentral.com/install-windows-subsystem-linux-windows-10)]
+1. Install Ubuntu on WSL (20.04 LTS Recommended) [See [this](https://www.windowscentral.com/install-windows-subsystem-linux-windows-10)]
 2. Setup Ubuntu
 	1. Enable copy pasting in Ubuntu terminal
 		1. Right click on ubuntu icon on top left corner of Ubuntu terminal window
@@ -11,7 +11,7 @@
 	2. Run the following commands (Paste using Ctrl+Shift+V)
 		1. ```sudo su``` 
 		2. ```sudo apt-get update```
-		3. ```sudo apt-get -y install build-essentials```
+		3. ```sudo apt-get -y install build-essential```
 		4. ```sudo apt-get -y install libglu1-mesa-dev freeglut3-dev mesa-common-dev mesa-utils xorg openbox xauth xserver-xorg-core xserver-xorg``` 
 	3. Edit ```.bashrc``` (Cheatsheet for nano [here](https://www.nano-editor.org/dist/latest/cheatsheet.html))
 		1. ```nano ~/.bashrc```
@@ -28,7 +28,7 @@
 ## How to run
 
 * Get OpenGL sample codes [here](https://www.opengl.org/archives/resources/code/samples/glut_examples/examples/examples.html)
-1. Start Xming server on Windows 
+1. Start Xming server on Windows (with all default settings)
 2. Navigate to Windows directory in Ubuntu terminal
 	* ```cd /mnt/c/Users/<USERNAME>/<FILEPATH_IN_WINDOWS>```
 3. Compile and Execute code
